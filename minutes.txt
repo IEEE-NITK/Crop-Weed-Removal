@@ -1,0 +1,4 @@
+Mentors Vishal and Rohit were explaining the plan they had about how to proceed further.
+They had divided the work in 3 major parts as Algorithm for segmentation, path planning and path following.
+They explained about all three in brief and asked us to do some self-exploration on each topic so that we can decide which one can go for.
+Manan was also present there, providing his feedback over required topics and gave few leads to serach on.
