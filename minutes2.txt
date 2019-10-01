@@ -1,0 +1,7 @@
+minutes
+	1)Crop and weed will be detected in 'segmentation' task and output of it will be in form of classes which will be defined for weed and crops.
+	2)from those output classes, path plannig will obtain cordinates of rectangle around detected weed and crops.
+	3) path plannig will sloved by A* algorithm in which weed cordinates(center point of rectangle) will treated as node points and crop rectangles as blocked path.
+	4)Output of path planning will be of 2 types of cordinates - a)targets b)corners where bot has to take turn.
+	5) So for task 3 'path following', configuring speed and directions with motors will be done according to cordinates.
+	6) we have kept some flaws as overlapping of rectangles on hold for now.
