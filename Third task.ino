@@ -1,3 +1,11 @@
+//
+//
+// I am learning to code, working of AtMega328 and other chips by going through documentations
+// And side by side looking into how a robotic arm works, learning how to simulate, linear actuators, etc
+//
+//
+
+
 /* include library */
 #include <ESP8266WiFi.h>
 
