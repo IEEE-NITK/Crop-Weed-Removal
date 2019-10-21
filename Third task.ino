@@ -1,7 +1,8 @@
 //
 //
 // I am learning to code, working of AtMega328 and other chips by going through documentations
-// And side by side looking into how a robotic arm works, learning how to simulate, linear actuators, etc
+// And side by side looking into how a pick and place robotic arm works, learning how to simulate in, linear actuators, etc
+// GPS feature looks a bit difficult because we need a bigger arena or accurate positioning by keeping a constant video capture overhead
 //
 //
 
@@ -123,5 +124,60 @@ void MotorStop(void)
   digitalWrite(rightMotorBackward,LOW);
 }
 
-/*RECEIVE DATA FROM the second task (path finding)*/
-/*Under progress*/
+//RECEIVE DATA FROM the second task (path finding)
+//Under progress
+//In python file:
+//Arduino = serial.Serial('COM3',9600) #Create Serial port object called arduinoSerialData
+//time.sleep(2) #wait for 2 seconds for the communication to get established
+//Arduino.write(b'f')
+//print("Forward")
+//time.sleep(1)
+//
+//Meanwhile in ino
+//loop:
+//while (Serial.available()){
+//    data = Serial.read();
+//    command = String(data);
+//    moveRobot(command);
+//}
+//In moveRobot function, 
+//void moveRobot(String motion){
+//
+//  if(motion == "f"){  // RW - Fwd(10 - Pos, 11 - Neg); LW - Fwd(12 - Pos, 13 - Neg)
+//    digitalWrite(10,HIGH);
+//    digitalWrite(11,LOW);
+//    digitalWrite(12,HIGH);
+//    digitalWrite(13,LOW);
+//    Serial.println("Forward");
+//  }
+
+//Robtic arm (Literaly don't know much about it, but found it very intresting and intriguing)
+//Trying out my logic
+//
+//Include libraries
+//#include <Servo.h>
+
+//define variables
+//#define DEBUG true //display ESP8266 messages on Serial Monitor
+//#define SERV1 8    //servo 1 on digital port 8
+//#define SERV2 9    //servo 2 on digital port 9
+//#define SERV3 10   //servo 3 on digital port 10
+//
+//don't know how many servos we need, maybe 5-6 is enough
+//
+//Servo s1; //servo 1
+//Servo s2; //servo 2
+//Servo s3; //servo 3
+//
+//
+//define starting angle for each servo
+//choose a safe position to start from
+//it will try to move instantaniously to that position when powered up
+//those angles will depend on the angle of each servo during the assemble
+//int angle1 = 90; //servo 1 current angle
+//int angle2 = 30; //servo 2 current angle
+//int angle3 = 0;  //servo 3 current angle
+//
+//Currently Working on
+//The code which will increase/decrease the angle of each servo in small steps until it matches received setpoint. 
+//In the end of each cycle a delay is used to limit the speed of the motors.
